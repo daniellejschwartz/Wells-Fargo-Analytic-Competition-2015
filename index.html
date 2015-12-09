@@ -1,69 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Wells Fargo Analytics Competition 2015 by daniellejschwartz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Wells Fargo Analytics Competition 2015 by daniellejschwartz</title>
   </head>
+
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Wells Fargo Analytics Competition 2015</h1>
-      <h2 class="project-tagline">An interpretation of social media posts to determine bank qualities</h2>
-      <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015" class="btn">View on GitHub</a>
-      <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <header>
+      <div class="inner">
+        <h1>Wells Fargo Analytics Competition 2015</h1>
+        <h2>An interpretation of social media posts to determine bank qualities</h2>
+        <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <section class="main-content">
-      <p>&lt;!DOCTYPE html&gt;
-
-</p>
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
-}
-
-li a {
-    display: block;
-    color: #000;
-    padding: 8px 0 8px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #555;
-    color: white;
-}
-
-
-<p>
-</p>
-
-<h2>
-<a id="navigation-bar" class="anchor" href="#navigation-bar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Navigation Bar</h2>
-
-<ul>
-  <li><a href="#Competition%20Overview">Overview</a></li>
-  <li><a href="#Our%20Approach">Approach</a></li>
-  <li><a href="#Cleaning%20the%20Data">Cleaning</a></li>
-  <li><a href="#Exploratory%20Data%20Analysis">Exploratory Analysis</a></li>
-</ul>
-
-<p>
-</p>
-
-<h2>
-<a id="competition-overview" class="anchor" href="#competition-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Competition Overview</h2>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="competition-overview" class="anchor" href="#competition-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Competition Overview</h1>
 
 <p>The Wells Fargo Analytic Competition asked groups from Colleges and Universities to analyze a data set of Twitter and Facebook posts in order to develop solutions to the following questions:
 <strong>What financial and bank topics* are consumers discussing in social media and what caused the consumers to post online about these topics?
@@ -80,8 +46,8 @@ Are the topics and “substance” consistent across the industry or are they is
     <span class="pl-smi">why</span> <span class="pl-smi">cant</span> <span class="pl-smi">i</span> <span class="pl-smi">leave</span> <span class="pl-smi">you</span>?<span class="pl-k">!</span>.. <span class="pl-smi">why</span> <span class="pl-smi">cant</span> <span class="pl-smi">i</span> <span class="pl-smi">just</span> <span class="pl-smi">go</span> <span class="pl-smi">to</span> <span class="pl-smi">a</span> <span class="pl-smi">banke</span><span class="pl-k">...</span>
 <span class="pl-c1">186</span><span class="pl-k">|</span><span class="pl-c1">8</span><span class="pl-k">/</span><span class="pl-c1">21</span><span class="pl-k">/</span><span class="pl-c1">2015</span><span class="pl-k">|</span><span class="pl-c1">2015</span><span class="pl-k">|</span><span class="pl-c1">8</span><span class="pl-k">|</span><span class="pl-smi">twitter</span><span class="pl-k">|</span><span class="pl-smi">mannn</span> <span class="pl-k">*</span> <span class="pl-smi">checks</span> <span class="pl-smi">BankD</span> <span class="pl-smi">account</span> <span class="pl-k">*</span> <span class="pl-smi">INTERNET</span> Ö</pre></div>
 
-<h2>
-<a id="our-approach" class="anchor" href="#our-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our Approach</h2>
+<h1>
+<a id="our-approach" class="anchor" href="#our-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our Approach</h1>
 
 <p>The following procedure was developed to analyze the given data for posts specific to BankA, BankB, BankC, and BankD using the R programming language:</p>
 
@@ -101,7 +67,9 @@ Are the topics and “substance” consistent across the industry or are they is
 <p>After uploading the original data set into R and uploading the necessary packages (see above), the data was cleaned using the following methodology in order to create a data set that would be easier to work with and extract valuable information from. </p>
 
 <p><strong>1) Remove metadata</strong>
-<img src="http://i.imgur.com/A9KroLz.png%0A**2" alt="Click to view metadata"> Remove non-ASCII characters**</p>
+![Click to view metadata](<a href="http://i.imgur.com/A9KroLz.png">http://i.imgur.com/A9KroLz.png</a></p>
+
+<p><strong>2) Remove non-ASCII characters</strong></p>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#This function removes the non-ASCII characters from the text so that it can be analyzed </span>
 <span class="pl-v">removeOffendingCharacters</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">df</span>)
@@ -161,7 +129,74 @@ Are the topics and “substance” consistent across the industry or are they is
 <h3>
 <a id="exploratory-data-analysis" class="anchor" href="#exploratory-data-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploratory Data Analysis</h3>
 
-<p><strong>Sentiment analysis function</strong></p>
+<p>We began our analysis by exploring the data, examining common word frequencies, and identifying clusters of words. These preliminary results helped direct us in our classification and sentiment analyses.</p>
+
+<p><strong>Analysis of frequent words</strong></p>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-c">#Create a Document Term Matrix to analyze the texts</span>
+<span class="pl-v">docs</span> <span class="pl-k">=</span> Corpus(VectorSource(<span class="pl-smi">df</span><span class="pl-k">$</span><span class="pl-smi">FullTextClean</span>))
+<span class="pl-v">dtm</span> <span class="pl-k">=</span> DocumentTermMatrix(<span class="pl-smi">docs</span>)   
+<span class="pl-v">dtm.sparse</span> <span class="pl-k">=</span> <span class="pl-smi">dtms</span> <span class="pl-k">&lt;-</span> removeSparseTerms(<span class="pl-smi">dtm</span>, <span class="pl-c1">0.999</span>)
+<span class="pl-v">dtm.sparse.simple</span> <span class="pl-k">=</span> as.simple_triplet_matrix(<span class="pl-smi">dtm.sparse</span>) 
+
+<span class="pl-c">#Compute the word frequencies</span>
+<span class="pl-smi">freq</span> <span class="pl-k">&lt;-</span> sort(col_sums(<span class="pl-smi">dtm.sparse.simple</span>), <span class="pl-v">decreasing</span><span class="pl-k">=</span><span class="pl-c1">TRUE</span>)   
+<span class="pl-c">#Remove the 9 most frequently occuring words because they are outliers</span>
+<span class="pl-v">freq</span> <span class="pl-k">=</span> <span class="pl-smi">freq</span>[<span class="pl-k">-</span>c(<span class="pl-c1">1</span><span class="pl-k">:</span><span class="pl-c1">9</span>)]
+<span class="pl-smi">wf</span> <span class="pl-k">&lt;-</span> <span class="pl-k">data.frame</span>(<span class="pl-v">word</span><span class="pl-k">=</span>names(<span class="pl-smi">freq</span>), <span class="pl-v">freq</span><span class="pl-k">=</span><span class="pl-smi">freq</span>)  
+
+<span class="pl-c">#Make a bar graph of the words appearing more than 6000 times</span>
+library(<span class="pl-smi">ggplot2</span>)   
+<span class="pl-v">p</span> <span class="pl-k">=</span> ggplot(subset(<span class="pl-smi">wf</span>, <span class="pl-smi">freq</span><span class="pl-k">&gt;</span><span class="pl-c1">6000</span>), aes(<span class="pl-smi">word</span>, <span class="pl-smi">freq</span>))    
+<span class="pl-v">p</span> <span class="pl-k">=</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> geom_bar(<span class="pl-v">stat</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>identity<span class="pl-pds">"</span></span>)   
+<span class="pl-v">p</span> <span class="pl-k">=</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> theme(<span class="pl-v">axis.text.x</span><span class="pl-k">=</span>element_text(<span class="pl-v">angle</span><span class="pl-k">=</span><span class="pl-c1">45</span>, <span class="pl-v">hjust</span><span class="pl-k">=</span><span class="pl-c1">1</span>))   
+<span class="pl-smi">p</span>   </pre></div>
+
+<p><img src="http://i.imgur.com/QaADvIn.png" alt=""></p>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-c">#Create a word cloud of the 60 most frequently occuring words</span>
+library(<span class="pl-smi">wordcloud</span>)   
+set.seed(<span class="pl-c1">145</span>)   
+wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</span>, <span class="pl-v">max.words</span> <span class="pl-k">=</span> <span class="pl-c1">60</span>, <span class="pl-v">scale</span><span class="pl-k">=</span>c(<span class="pl-c1">5</span>, .<span class="pl-c1">1</span>), <span class="pl-v">colors</span><span class="pl-k">=</span>brewer.pal(<span class="pl-c1">6</span>, <span class="pl-s"><span class="pl-pds">"</span>Dark2<span class="pl-pds">"</span></span>))</pre></div>
+
+<p><img src="http://i.imgur.com/jp97IGK.png" alt=""></p>
+
+<p>Once the exploratory data analysis was complete, it was decided to separate the data set based on 4 topics: Customer Service (CS), Bank Services (S), Public Relations (PR), and Nonsense (NS). </p>
+
+<p><strong>Example list of frequent words later used to manually define posts into the Bank Services category:</strong></p>
+
+<table>
+<thead>
+<tr>
+<th><strong>account</strong></th>
+<th><strong>card</strong></th>
+<th><strong>money</strong></th>
+<th><strong>email</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>rate</strong></td>
+<td><strong>check</strong></td>
+<td><strong>credit</strong></td>
+<td><strong>cash</strong></td>
+</tr>
+<tr>
+<td><strong>pay</strong></td>
+<td><strong>buy</strong></td>
+<td><strong>loan</strong></td>
+<td><strong>atm</strong></td>
+</tr>
+<tr>
+<td><strong>deposit</strong></td>
+<td><strong>fee</strong></td>
+<td><strong>online</strong></td>
+<td><strong>debit</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Creation of sentiment analysis function</strong></p>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#This function counts the number of positive words and negative words in a post</span>
 <span class="pl-c">#Positive and Negative words are imported from text files named positive-words.txt and negative-words.txt</span>
@@ -203,51 +238,25 @@ Are the topics and “substance” consistent across the industry or are they is
   <span class="pl-k">return</span>(<span class="pl-smi">df</span>)
 }</pre></div>
 
-<p><strong>Analysis of frequent words</strong></p>
+<h3>
+<a id="bag-of-words-random-forest-classification-algorithm" class="anchor" href="#bag-of-words-random-forest-classification-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bag-of-Words Random Forest Classification Algorithm</h3>
 
-<div class="highlight highlight-source-r"><pre><span class="pl-c">#Create a Document Term Matrix to analyze the texts</span>
-<span class="pl-v">docs</span> <span class="pl-k">=</span> Corpus(VectorSource(<span class="pl-smi">df</span><span class="pl-k">$</span><span class="pl-smi">FullTextClean</span>))
-<span class="pl-v">dtm</span> <span class="pl-k">=</span> DocumentTermMatrix(<span class="pl-smi">docs</span>)   
-<span class="pl-v">dtm.sparse</span> <span class="pl-k">=</span> <span class="pl-smi">dtms</span> <span class="pl-k">&lt;-</span> removeSparseTerms(<span class="pl-smi">dtm</span>, <span class="pl-c1">0.999</span>)
-<span class="pl-v">dtm.sparse.simple</span> <span class="pl-k">=</span> as.simple_triplet_matrix(<span class="pl-smi">dtm.sparse</span>) 
+<p>In order to classify the data set into the constructed categories (Customer Service, Bank Services, Public Relations, and Nonsense) using a bag-of-words random forest classification algorithm, a sample of 600 posts were labeled by category and continuously applied to the dataset. For example, if a post mentions “atm” or “online banking,” it would be labeled in the Bank Services category. </p>
 
-<span class="pl-c">#Compute the word frequencies</span>
-<span class="pl-smi">freq</span> <span class="pl-k">&lt;-</span> sort(col_sums(<span class="pl-smi">dtm.sparse.simple</span>), <span class="pl-v">decreasing</span><span class="pl-k">=</span><span class="pl-c1">TRUE</span>)   
-<span class="pl-c">#Remove the 9 most frequently occuring words because they are outliers</span>
-<span class="pl-v">freq</span> <span class="pl-k">=</span> <span class="pl-smi">freq</span>[<span class="pl-k">-</span>c(<span class="pl-c1">1</span><span class="pl-k">:</span><span class="pl-c1">9</span>)]
-<span class="pl-smi">wf</span> <span class="pl-k">&lt;-</span> <span class="pl-k">data.frame</span>(<span class="pl-v">word</span><span class="pl-k">=</span>names(<span class="pl-smi">freq</span>), <span class="pl-v">freq</span><span class="pl-k">=</span><span class="pl-smi">freq</span>)  
+<p>The program then learned from the sample data to create predictions of category for each post. During cross validation, the accuracy of predictions was found to be approximately 77%. The classification tree and naive bayes classification algorithms were also tested, but both had much lower accuracy. A larger training data set (&gt;600 posts)would likely improve accuracy further.</p>
 
-<span class="pl-c">#Make a bar graph of the words appearing more than 6000 times</span>
-library(<span class="pl-smi">ggplot2</span>)   
-<span class="pl-v">p</span> <span class="pl-k">=</span> ggplot(subset(<span class="pl-smi">wf</span>, <span class="pl-smi">freq</span><span class="pl-k">&gt;</span><span class="pl-c1">6000</span>), aes(<span class="pl-smi">word</span>, <span class="pl-smi">freq</span>))    
-<span class="pl-v">p</span> <span class="pl-k">=</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> geom_bar(<span class="pl-v">stat</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">"</span>identity<span class="pl-pds">"</span></span>)   
-<span class="pl-v">p</span> <span class="pl-k">=</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> theme(<span class="pl-v">axis.text.x</span><span class="pl-k">=</span>element_text(<span class="pl-v">angle</span><span class="pl-k">=</span><span class="pl-c1">45</span>, <span class="pl-v">hjust</span><span class="pl-k">=</span><span class="pl-c1">1</span>))   
-<span class="pl-smi">p</span>   </pre></div>
+<p><img src="http://i.imgur.com/8u5rA0g.png" alt=""></p>
 
-<p><img src="http://i.imgur.com/QaADvIn.png" alt=""></p>
+<h3>
+<a id="overall-sentiment" class="anchor" href="#overall-sentiment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall Sentiment</h3>
 
-<p><strong>Example list of frequent words later used to manually define posts into the Bank Services category:</strong></p>
+<p><em>Boxplot of Sentiment Density Scores for each Topic. Nonsense posts made up the majority of all posts and have the greatest spread of sentiment.</em>
+<img src="http://i.imgur.com/cXxmn7v.png" alt=""></p>
 
-<table>
-<thead>
-<tr>
-<th>First Header</th>
-<th>Second Header</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Content from cell 1</td>
-<td>Content from cell 2</td>
-</tr>
-<tr>
-<td>Content in the first column</td>
-<td>Content in the second column</td>
-</tr>
-</tbody>
-</table>
+<p><em>Average Sentiment Density Scores for each Topic. The nonsense posts provide a baseline sentiment score against which we can compare the other topics. Across all posts, scores for bank services average negative and scores for customer service and public relations average positive.</em>
+<img src="http://i.imgur.com/Qp9dhJp.png" alt=""></p>
 
-<p>Once the exploratory data analysis was complete, it was decided to separate the data set based on 4 topics: Customer Service (CS), Bank Services (S), Public Relations (PR), and Nonsense (NS). To analyze the substance of these topics for each bank, we first needed to separate the posts by bank mentions. </p>
+<p>On average, customers have positive sentiments for customer service related posts and negative sentiments for bank services related posts. Therefore, the substance for both customer service and bank services is universal across the industry. However, the degree of sentiment associated with each category varies by bank. While customers have generally negative interactions with banking services, banks appear to be able to compensate for these issues with generally positive interactions with public relations and customer service. Banks should focus on improving their Bank Services as listed above.</p>
 
 <h3>
 <a id="separating-the-posts-by-bank" class="anchor" href="#separating-the-posts-by-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>Separating the Posts by Bank</h3>
@@ -278,21 +287,28 @@ library(<span class="pl-smi">ggplot2</span>)
   <span class="pl-k">return</span>(<span class="pl-smi">df</span>)
 }</pre></div>
 
-<h3>
-<a id="bag-of-words-random-forest-classification-algorithm" class="anchor" href="#bag-of-words-random-forest-classification-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bag-of-Words Random Forest Classification Algorithm</h3>
+<p><em>Average Sentiment Density Scores by Topic and Bank</em>
+<img src="http://i.imgur.com/8J6V5FE.png" alt=""></p>
 
-<p>In order to classify the data set into the constructed categories (Customer Service, Bank Services, Public Relations, and Nonsense) using a bag-of-words random forest classification algorithm, a sample of 600 posts were labeled by category and continuously applied to the dataset. For example, if a post mentions “atm” or “online banking,” it would be labeled in the Bank Services category. </p>
+<p>Sentiment scores varied in magnitude and direction by bank for each topic. For example, Bank B had the most positive sentiments for customer service and pr, but the most negative sentiment for bank services. It is possible that Bank B is forced to compensate for poor banking services with more customer service and public relations. This information is useful for individual banks to see how their services compare to their competitors. </p>
+        </section>
 
-<p>The program then learned from the sample data to create predictions of category for each post. During cross validation, the accuracy of predictions was found to be approximately 77%. The classification tree and naive bayes classification algorithms were also tested, but both had much lower accuracy. A larger training data set (&gt;600 posts)would likely improve accuracy further.
-**</p>
+        <aside id="sidebar">
+          <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015">Wells Fargo Analytics Competition 2015</a> is maintained by <a href="https://github.com/daniellejschwartz">daniellejschwartz</a>.</span>
+          <p class="repo-owner"><a href="https://github.com/daniellejschwartz/Wells-Fargo-Analytic-Competition-2015"></a> is maintained by <a href="https://github.com/daniellejschwartz">daniellejschwartz</a>.</p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
   
   </body>
