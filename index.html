@@ -53,21 +53,21 @@ Are the topics and “substance” consistent across the industry or are they is
 
 <p><img src="http://i.imgur.com/YYxuhly.jpg" alt=""></p>
 
-<h3>
-<a id="upload-packages" class="anchor" href="#upload-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Packages</h3>
+<h2>
+<a id="upload-packages" class="anchor" href="#upload-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upload Packages</h2>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#Install Required Packages</span>
 <span class="pl-smi">needed</span> <span class="pl-k">&lt;-</span> c(<span class="pl-s"><span class="pl-pds">"</span>tm<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>SnowballC<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>RColorBrewer<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>ggplot2<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>wordcloud<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>biclust<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>cluster<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>igraph<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>fpc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>slam<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>plyr<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>doMC<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>stringr<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>rpart<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>randomForest<span class="pl-pds">"</span></span>)
 <span class="pl-c">#install.packages(needed, dependencies=TRUE) #This only needs to be done once</span>
 <span class="pl-v">list</span> <span class="pl-k">=</span> lapply(<span class="pl-smi">needed</span>, <span class="pl-smi">require</span>, <span class="pl-v">character.only</span> <span class="pl-k">=</span> <span class="pl-c1">TRUE</span>) <span class="pl-c">#This needs to be done every time you restart R</span></pre></div>
 
-<h3>
-<a id="cleaning-the-data" class="anchor" href="#cleaning-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cleaning the Data</h3>
+<h2>
+<a id="cleaning-the-data" class="anchor" href="#cleaning-the-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cleaning the Data</h2>
 
 <p>After uploading the original data set into R and uploading the necessary packages (see above), the data was cleaned using the following methodology in order to create a data set that would be easier to work with and extract valuable information from. </p>
 
 <p><strong>1) Remove metadata</strong>
-![Click to view metadata](<a href="http://i.imgur.com/A9KroLz.png">http://i.imgur.com/A9KroLz.png</a></p>
+<img src="http://i.imgur.com/A9KroLz.png" alt="Click to view metadata"></p>
 
 <p><strong>2) Remove non-ASCII characters</strong></p>
 
@@ -126,8 +126,8 @@ Are the topics and “substance” consistent across the industry or are they is
   <span class="pl-k">return</span>(<span class="pl-smi">df</span>)
 }</pre></div>
 
-<h3>
-<a id="exploratory-data-analysis" class="anchor" href="#exploratory-data-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploratory Data Analysis</h3>
+<h2>
+<a id="exploratory-data-analysis" class="anchor" href="#exploratory-data-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploratory Data Analysis</h2>
 
 <p>We began our analysis by exploring the data, examining common word frequencies, and identifying clusters of words. These preliminary results helped direct us in our classification and sentiment analyses.</p>
 
@@ -196,6 +196,8 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 </tbody>
 </table>
 
+<p>Running a sentiment analysis for each category was decided to be the best possible way to determine whether categories had a positive or negative connotation on social media outlets like Twitter and Facebook. The following function was created to run sentiment on the categories with ease. </p>
+
 <p><strong>Creation of sentiment analysis function</strong></p>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#This function counts the number of positive words and negative words in a post</span>
@@ -238,8 +240,10 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
   <span class="pl-k">return</span>(<span class="pl-smi">df</span>)
 }</pre></div>
 
-<h3>
-<a id="bag-of-words-random-forest-classification-algorithm" class="anchor" href="#bag-of-words-random-forest-classification-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bag-of-Words Random Forest Classification Algorithm</h3>
+<p>As you can see, the sentiment density scores have been normalized for length of post. Therefore, when comparing tweets (140 character max) and Facebook posts (63,206 character max) the sentiment will not be directly influenced by the length of the posts. </p>
+
+<h2>
+<a id="bag-of-words-random-forest-classification-algorithm" class="anchor" href="#bag-of-words-random-forest-classification-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bag-of-Words Random Forest Classification Algorithm</h2>
 
 <p>In order to classify the data set into the constructed categories (Customer Service, Bank Services, Public Relations, and Nonsense) using a bag-of-words random forest classification algorithm, a sample of 600 posts were labeled by category and continuously applied to the dataset. For example, if a post mentions “atm” or “online banking,” it would be labeled in the Bank Services category. </p>
 
@@ -247,8 +251,8 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 
 <p><img src="http://i.imgur.com/8u5rA0g.png" alt=""></p>
 
-<h3>
-<a id="overall-sentiment" class="anchor" href="#overall-sentiment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall Sentiment</h3>
+<h2>
+<a id="overall-sentiment-results" class="anchor" href="#overall-sentiment-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall Sentiment Results</h2>
 
 <p><em>Boxplot of Sentiment Density Scores for each Topic. Nonsense posts made up the majority of all posts and have the greatest spread of sentiment.</em>
 <img src="http://i.imgur.com/cXxmn7v.png" alt=""></p>
@@ -258,12 +262,12 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 
 <p>On average, customers have positive sentiments for customer service related posts and negative sentiments for bank services related posts. Therefore, the substance for both customer service and bank services is universal across the industry. However, the degree of sentiment associated with each category varies by bank. While customers have generally negative interactions with banking services, banks appear to be able to compensate for these issues with generally positive interactions with public relations and customer service. Banks should focus on improving their Bank Services as listed above.</p>
 
-<h3>
-<a id="separating-the-posts-by-bank" class="anchor" href="#separating-the-posts-by-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>Separating the Posts by Bank</h3>
+<h2>
+<a id="separating-the-posts-by-bank" class="anchor" href="#separating-the-posts-by-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>Separating the Posts by Bank</h2>
 
-<div class="highlight highlight-source-r"><pre><span class="pl-c">#This function analyzes the dataset to identify which banks are mentioned in each post.</span>
-<span class="pl-c">#It creates 5 new variables (for banks A-E)</span>
-<span class="pl-c">#The field has a 0 if the bank is not mentioned, and a 1 if the bank is mentioned.</span>
+<p>In order to determine if the sentiment for Customer Service, Bank Services, and Public Relations are universal across all banks, the posts need to be organized into individual data frames for each bank. To do this, a function to identify bank mentions in posts was created, and a loop was used to assign posts mentioning banks to their respective data set. If a posts mentions more then one bank, it will be present in multiple data sets.</p>
+
+<div class="highlight highlight-source-r"><pre><span class="pl-c">#The field has a 0 if the bank is not mentioned, and a 1 if the bank is mentioned.</span>
 <span class="pl-c">#It also creates a field that counts the number of banks mentioned in the post.</span>
 <span class="pl-c">#Some posts mention 0 banks, most mention 1, and a few mention multiple</span>
 <span class="pl-v">bankMentions</span> <span class="pl-k">=</span> <span class="pl-k">function</span>(<span class="pl-smi">df</span>)
@@ -287,13 +291,38 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
   <span class="pl-k">return</span>(<span class="pl-smi">df</span>)
 }</pre></div>
 
-<p><img src="http://i.imgur.com/8J6V5FE.png" alt=""></p>
+<p><em>Number of posts mentioning each bank</em>
+<img src="http://i.imgur.com/8J6V5FE.png" alt=""></p>
 
-<p><em>Average Sentiment Density Scores by Topic and Bank</em></p>
+<h2>
+<a id="bank-specific-sentiment-results" class="anchor" href="#bank-specific-sentiment-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bank Specific Sentiment Results</h2>
 
-<p><img src="http://i.imgur.com/CZ8JX5d.png" alt=""></p>
+<p>The previously constructed sentiment function was run on each bank data set. 
+<em>Average Sentiment Density Scores by Topic and Bank</em></p>
 
-<p>Sentiment scores varied in magnitude and direction by bank for each topic. For example, Bank B had the most positive sentiments for customer service and pr, but the most negative sentiment for bank services. It is possible that Bank B is forced to compensate for poor banking services with more customer service and public relations. This information is useful for individual banks to see how their services compare to their competitors. </p>
+<p><img src="http://i.imgur.com/gtt9umK.png" alt=""></p>
+
+<p>Bank A
+<strong>Customer Service:</strong> Positive
+<strong>Bank Services:</strong> Negative
+<strong>Public Relations:</strong> Positive</p>
+
+<p>Bank B
+<strong>Customer Service:</strong> Positive
+<strong>Bank Services:</strong> Negative
+<strong>Public Relations:</strong> Positive</p>
+
+<p>Bank C
+<strong>Customer Service:</strong> Positive
+<strong>Bank Services:</strong> Negative
+<strong>Public Relations:</strong> Negative</p>
+
+<p>Bank D
+<strong>Customer Service:</strong> Positive
+<strong>Bank Services:</strong> Negative
+<strong>Public Relations:</strong> Negative</p>
+
+<p>Sentiment scores varied in magnitude and direction by bank for each topic. For example, Bank B had the most positive sentiments for Customer Service and Public Relations, but the most negative sentiment for bank services. It is possible that Bank B is forced to compensate for poor banking services with more customer service and public relations. This information is useful for individual banks to see how their services compare to their competitors. </p>
         </section>
 
         <aside id="sidebar">
