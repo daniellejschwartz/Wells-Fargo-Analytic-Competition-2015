@@ -259,7 +259,7 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <h2>
 <a id="separating-the-posts-by-bank" class="anchor" href="#separating-the-posts-by-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>Separating the Posts by Bank</h2>
 
-<p>In order to determine if the sentiment for Customer Service, Bank Services, and Public Relations are universal across all banks, the posts need to be organized into individual data frames for each bank. To do this, a function to identify bank mentions in posts was created, and this information was then used to assign posts mentioning banks to their respective data set. If a posts mentions more then one bank, it will be present in multiple data sets.</p>
+<p>In order to determine if the sentiment for Customer Service, Bank Services, and Public Relations are universal across all banks, the posts need to be organized into individual data frames for each bank. To do this, a function to identify bank mentions in posts was created, and this information was then used to assign posts mentioning banks to their respective data frame. If a posts mentions more then one bank, it will be present in multiple data sets.</p>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#The field has a 0 if the bank is not mentioned, and a 1 if the bank is mentioned.</span>
 <span class="pl-c">#It also creates a field that counts the number of banks mentioned in the post.</span>
