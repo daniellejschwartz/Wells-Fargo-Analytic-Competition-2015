@@ -312,30 +312,43 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <h2>
 <a id="bank-specific-sentiment-results" class="anchor" href="#bank-specific-sentiment-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bank Specific Sentiment Results</h2>
 
-<p>The previously constructed sentiment function was run on each bank data frame. 
-<em>Average Sentiment Density Scores by Topic and Bank</em></p>
+<p>The previously constructed sentiment function was run on each bank data frame. </p>
+
+<p><em>Average Sentiment Density Scores by Topic and Bank</em></p>
 
 <p><img src="http://i.imgur.com/gtt9umK.png" alt=""></p>
 
-<p>Bank A
-<strong>Customer Service:</strong> Positive
+<p>Bank A</p>
+
+<blockquote>
+<p><strong>Customer Service:</strong> Positive
 <strong>Bank Services:</strong> Negative
 <strong>Public Relations:</strong> Positive</p>
+</blockquote>
 
-<p>Bank B
-<strong>Customer Service:</strong> Positive
+<p>Bank B</p>
+
+<blockquote>
+<p><strong>Customer Service:</strong> Positive
 <strong>Bank Services:</strong> Negative
 <strong>Public Relations:</strong> Positive</p>
+</blockquote>
 
-<p>Bank C
-<strong>Customer Service:</strong> Positive
+<p>Bank C</p>
+
+<blockquote>
+<p><strong>Customer Service:</strong> Positive
 <strong>Bank Services:</strong> Negative
 <strong>Public Relations:</strong> Negative</p>
+</blockquote>
 
-<p>Bank D
-<strong>Customer Service:</strong> Positive
+<p>Bank D</p>
+
+<blockquote>
+<p><strong>Customer Service:</strong> Positive
 <strong>Bank Services:</strong> Negative
 <strong>Public Relations:</strong> Negative</p>
+</blockquote>
 
 <p>Sentiment scores varied in magnitude and direction by bank for each topic. For example, Bank B had the most positive sentiments for Customer Service and Public Relations, but the most negative sentiment for bank services. It is possible that Bank B is forced to compensate for poor banking services with more customer service and public relations. This information is useful for individual banks to see how their services compare to their competitors. </p>
 
@@ -402,11 +415,13 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <span class="pl-v">p</span> <span class="pl-k">=</span> <span class="pl-smi">p</span> <span class="pl-k">+</span> theme(<span class="pl-v">axis.text.x</span><span class="pl-k">=</span>element_text(<span class="pl-v">angle</span><span class="pl-k">=</span><span class="pl-c1">45</span>, <span class="pl-v">hjust</span><span class="pl-k">=</span><span class="pl-c1">1</span>))   
 <span class="pl-smi">p</span></pre></div>
 
-<p><em>Number of posts mentioning ATM's by bank</em>
-<img src="http://i.imgur.com/SpREc1h.png" alt=""></p>
+<p><em>Number of posts mentioning ATM's by bank</em></p>
 
-<p><em>ATM impact score by bank</em>
-<img src="http://i.imgur.com/nTIyjss.png" alt=""></p>
+<p><img src="http://i.imgur.com/SpREc1h.png" alt=""></p>
+
+<p><em>ATM impact score by bank</em></p>
+
+<p><img src="http://i.imgur.com/nTIyjss.png" alt=""></p>
 
 <p>The graph tells us that ATM's did not have much of a presence in the posts related to Bank Services (the largest percentage is Bank B with 1.7% of the posts mentioning ATM's.) This shows that ATM's may not be the largest service problem for the banks. However, you can see that there is greater prevalence of ATM mentions for banks A and B, so they may want to place more attention on this area of service compared to bank C or D. </p>
 
@@ -414,8 +429,9 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 
 <p>For another example, lets check the posts for each bank mentioning "accounts" using the same methodology.</p>
 
-<p><em>Account impact score by bank</em>
-<img src="http://i.imgur.com/0YNLqSs.png" alt=""></p>
+<p><em>Account impact score by bank</em></p>
+
+<p><img src="http://i.imgur.com/0YNLqSs.png" alt=""></p>
 
 <p>Here we can see that posts about accounts have a greater impact on the sentiment score, as there are more mentions of account services than the ATM services. Banks A, B, and D all have high scores for account mentions, with Bank B being the greatest at 8.8%. Changing the approach to current account processes is definitely something these banks should take into account when looking to improve their Bank Services. </p>
 
