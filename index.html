@@ -259,7 +259,7 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <h2>
 <a id="separating-the-posts-by-bank" class="anchor" href="#separating-the-posts-by-bank" aria-hidden="true"><span class="octicon octicon-link"></span></a>Separating the Posts by Bank</h2>
 
-<p>In order to determine if the sentiment for Customer Service, Bank Services, and Public Relations are universal across all banks, the posts need to be organized into individual data frames for each bank. To do this, a function to identify bank mentions in posts was created, and this information was then used to assign posts mentioning banks to their respective data frame. If a posts mentions more then one bank, it will be present in multiple data sets.</p>
+<p>In order to determine if the sentiment for Customer Service, Bank Services, and Public Relations are universal across all banks, the posts need to be organized into individual data frames for each bank. To do this, a function to identify bank mentions in posts was created, and this information was then used to assign posts mentioning banks to their respective data frame. If a posts mentions more then one bank, it will be present in multiple data frames.</p>
 
 <div class="highlight highlight-source-r"><pre><span class="pl-c">#The field has a 0 if the bank is not mentioned, and a 1 if the bank is mentioned.</span>
 <span class="pl-c">#It also creates a field that counts the number of banks mentioned in the post.</span>
@@ -312,7 +312,7 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <h2>
 <a id="bank-specific-sentiment-results" class="anchor" href="#bank-specific-sentiment-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bank Specific Sentiment Results</h2>
 
-<p>The previously constructed sentiment function was run on each bank data set. 
+<p>The previously constructed sentiment function was run on each bank data frame. 
 <em>Average Sentiment Density Scores by Topic and Bank</em></p>
 
 <p><img src="http://i.imgur.com/gtt9umK.png" alt=""></p>
@@ -342,7 +342,7 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <h2>
 <a id="mention-analysis" class="anchor" href="#mention-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mention Analysis</h2>
 
-<p>Assuming all posts mentioning the string "ATM" were labelled in the Bank Services category, we can investigate atm mentions in each bank data frame to determine the overall impact of ATM's on the Bank Services sentiment for each bank. As listed above, all of the banks were concluded to have negative sentiment associated with their Bank Services. </p>
+<p>Assuming all posts mentioning the string "ATM" were labelled in the Bank Services category, we can investigate ATM mentions in each bank data frame to determine the overall impact of ATM's on the Bank Services sentiment for each bank. As listed above, all of the banks were concluded to have negative sentiment associated with their Bank Services. </p>
 
 <p><em>Code for determining # of ATM mentions in each bank, then creating an ATM impact score by summing the mentions and dividing by # of overall posts about the bank. The creation of the impact score removes any bias contributed to the differing number of posts per bank.</em></p>
 
@@ -403,10 +403,10 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <span class="pl-smi">p</span></pre></div>
 
 <p><em>Number of posts mentioning ATM's by bank</em>
-<img src="http://imgur.com/SpREc1h" alt=""></p>
+<img src="http://i.imgur.com/SpREc1h.png" alt=""></p>
 
 <p><em>ATM impact score by bank</em>
-<img src="http://imgur.com/nTIyjss" alt=""></p>
+<img src="http://i.imgur.com/nTIyjss.png" alt=""></p>
 
 <p>The graph tells us that ATM's did not have much of a presence in the posts related to Bank Services (the largest percentage is Bank B with 1.7% of the posts mentioning ATM's.) This shows that ATM's may not be the largest service problem for the banks. However, you can see that there is greater prevalence of ATM mentions for banks A and B, so they may want to place more attention on this area of service compared to bank C or D. </p>
 
@@ -415,7 +415,7 @@ wordcloud(names(<span class="pl-smi">freq</span>), <span class="pl-smi">freq</sp
 <p>For another example, lets check the posts for each bank mentioning "accounts" using the same methodology.</p>
 
 <p><em>Account impact score by bank</em>
-<img src="http://imgur.com/0YNLqSs" alt=""></p>
+<img src="http://i.imgur.com/0YNLqSs.png" alt=""></p>
 
 <p>Here we can see that posts about accounts have a greater impact on the sentiment score, as there are more mentions of account services than the ATM services. Banks A, B, and D all have high scores for account mentions, with Bank B being the greatest at 8.8%. Changing the approach to current account processes is definitely something these banks should take into account when looking to improve their Bank Services. </p>
 
